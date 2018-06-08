@@ -21,7 +21,7 @@ let draw = ({restart}, env) => {
     let (r, g, b) = ColorUtils.hexToRgb(List.nth(palette, 0));
     Draw.background(Utils.color(~r, ~g, ~b, ~a=255), env);
     let count = getRandomAmount(5) + 200;
-    for (i in 0 to count) {
+    for (_i in 0 to count) {
       let pointCount = getRandomAmount(10) + 10;
       let y = getRandomAmount(height);
       let offset = width / 4 + (getRandomAmount(2) - 1) * width / 8;
@@ -64,10 +64,5 @@ let draw = ({restart}, env) => {
 
 let mouseDown = (_state, _env) => {restart: true};
 let mouseUp = (_state, _env) => {restart: false};
-
-/* print_endline(string_of_int(NumberUtils.getRandomWeight(weights, Random.float(1.0))));
-   print_endline(string_of_int(NumberUtils.getRandomWeight(weights, Random.float(1.0))));
-   print_endline(string_of_int(NumberUtils.getRandomWeight(weights, Random.float(1.0))));
-   print_endline(List.nth(palette, NumberUtils.getRandomWeight(weights, Random.float(1.0)) - 1)); */
 
 run(~setup, ~draw, ~mouseDown, ~mouseUp, ());

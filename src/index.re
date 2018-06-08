@@ -14,10 +14,22 @@ let setup = env => {
 let getRandomAmount = value =>
   int_of_float(floor(Random.float(1.0) *. float_of_int(value)));
 
+let couldBeNegative = () => {
+  Random.float(1.0) > 0.5 ? 1 : -1;
+};
+
+let getPoint = (offset, width, y) => {
+  (
+    (getRandomAmount(offset) * couldBeNegative()) + getRandomAmount(width),
+    (-20) + y + (-20) + getRandomAmount(20),
+  )
+};
+
 let draw = ({restart}, env) => {
   if (restart) {
     let randomIndex = Random.int(List.length(Palettes.colors) - 1);
     let palette = List.nth(Palettes.colors, randomIndex);
+    let palette = [List.nth(palette, 0), List.nth(palette, 1), List.nth(palette, 2)];
     let (r, g, b) = ColorUtils.hexToRgb(List.nth(palette, 0));
     Draw.background(Utils.color(~r, ~g, ~b, ~a=255), env);
     let count = getRandomAmount(5) + 200;
@@ -26,24 +38,16 @@ let draw = ({restart}, env) => {
       let y = getRandomAmount(height);
       let offset = width / 4 + (getRandomAmount(2) - 1) * width / 8;
       let points =
-        Array.init(pointCount / 2, _pos =>
-          (
-            (
-              offset + getRandomAmount(width),
-              (-20) + y + (-20) + getRandomAmount(20),
-            ),
-            (
-              offset + getRandomAmount(width),
-              (-20) + y + (-20) + getRandomAmount(20),
-            ),
-          )
-        );
+        Array.init(pointCount / 2, _pos => {
+          (getPoint(offset, width, y), getPoint(offset, width, y))
+        });
 
       let paletteIndex =
         NumberUtils.getRandomWeight(weights, Random.float(1.0));
       let (r, g, b) = ColorUtils.hexToRgb(List.nth(palette, paletteIndex));
       let last = List.length(palette) - 1 === paletteIndex;
-      Draw.fill(Utils.color(~r, ~g, ~b, ~a=last ? 12 : 191), env);
+      print_endline(string_of_int(paletteIndex));
+      Draw.fill(Utils.color(~r, ~g, ~b, ~a=last ? 10 : 80), env);
       
       Array.iteri(
         (_index, pts) => {

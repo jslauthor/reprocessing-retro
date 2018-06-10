@@ -1,11 +1,11 @@
 Matt DesLauriers' Retro Album Cover in Reprocessing 
 ---
 
-This repo is a ReasonML port of [Matt DesLaurier's (@mattdesl) Retro Album Cover](https://t.co/umnQhaSkDH) in Reprocessing. Compiles to Webgl and Native OpenGL!
+This repo is a ReasonML port of [Matt DesLaurier's (@mattdesl) Retro Album Cover](https://t.co/umnQhaSkDH) in Reprocessing. Compiles to WebGL and Native OpenGL!
 
 Here's a preview: 
 
-
+![Retro Album](https://cl.ly/0K3Y1K3H3y0m)
 
 ## How to run native binary
 

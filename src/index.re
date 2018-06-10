@@ -14,7 +14,7 @@ type state = {
   shapes: array(shape),
 };
 
-let size = 1024;
+let size = 600;
 let height = size;
 let width = size;
 let weights = [|200.0, 25.0, 40.0|];
@@ -24,7 +24,7 @@ let getRandomAmount = value =>
 
 let getPoint = (offset, width, y) => (
   offset + getRandomAmount(width),
-  (-20) + y + (-20) + getRandomAmount(20),
+  (-40) + y + getRandomAmount(20),
 );
 
 let createShape = (palette, count, index) => {
@@ -79,10 +79,10 @@ let drawPoints = (env, _index, pts) => {
 
 let drawShape = (env, _index, {points, color, last, strokeWeight}) => {
   let (r, g, b) = color;
-  let color = Utils.color(~r, ~g, ~b, ~a=last ? 10 : 80);
+  let color = Utils.color(~r, ~g, ~b, ~a=last ? 13 : 191);
   Draw.fill(color, env);
   Draw.stroke(color, env);
-  Draw.strokeWeight(strokeWeight, env);
+  Draw.strokeWeight(strokeWeight / 2, env);
   Draw.strokeCap(Square, env);
   Array.iteri(drawPoints(env), points);
 };

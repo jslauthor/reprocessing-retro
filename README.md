@@ -1,38 +1,19 @@
-Reprocessing Example
+Matt DesLauriers' Retro Album Cover in Reprocessing 
 ---
 
-Clone this repo to get started with [Reprocessing](https://github.com/schmavery/reprocessing).
+This repo is a ReasonML port of [Matt DesLaurier's (@mattdesl) Retro Album Cover](https://t.co/umnQhaSkDH) in Reprocessing. Compiles to Webgl and Native OpenGL!
 
-Demos are on other branches:
+Here's a preview: 
 
-- [Flappy Bird](https://github.com/bsansouci/reprocessing-example/tree/livestream-flappybird)
-- [2048](https://github.com/bsansouci/reprocessing-example/tree/2048)
 
-...and more on the [Reprocessing repo](https://github.com/schmavery/reprocessing#projects-using-reprocessing).
 
-## How to
-```
-git clone https://github.com/bsansouci/reprocessing-example.git
-```
+## How to run native binary
 
-### Install
+`yarn && yarn run build:native && yarn run start:native`
 
-```
-npm install
-```
+_check package.json for other build options_
 
-### Build
-```
-npm run build
-```
+## Reprocessing
 
-### Start
-```
-npm start
-```
+Special thanks to @schmavery. Clone this repo to get started with [Reprocessing](https://github.com/schmavery/reprocessing).
 
-To build to JS run `npm run build:web` and then run a static server, like `python -m SimpleHTTPServer` and go to `localhost:8000`. If you're using safari you can simply open the `index.html` and tick `Develop > Disable Cross-Origin Restrictions`.
-
-To build to native run `npm run build:native` and run `npm run start:native`
-
-The build system used is [bsb-native](https://github.com/bsansouci/bsb-native).

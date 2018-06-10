@@ -5,7 +5,7 @@ This repo is a ReasonML port of [Matt DesLaurier's (@mattdesl) Retro Album Cover
 
 Here's a preview: 
 
-![Retro Album](https://cl.ly/0K3Y1K3H3y0m)
+![retro](https://cl.ly/0K3Y1K3H3y0m/download/retro.gif)
 
 ## How to run native binary
 
@@ -16,4 +16,3 @@ _check package.json for other build options_
 ## Reprocessing
 
 Special thanks to @schmavery. Clone this repo to get started with [Reprocessing](https://github.com/schmavery/reprocessing).
-

@@ -9,11 +9,10 @@
     "clean": "bsb -clean-world"
   },
   "dependencies": {
-    "Reprocessing": "schmavery/reprocessing",
-    "FontGenerator": "bsansouci/font-generator"
+    "reprocessing": "0.2.0"
   },
   "devDependencies": {
-    "bs-platform": "bsansouci/bsb-native#2.1.1",
+    "bsb-native": "4.0.6",
     "font-generator": "bsansouci/font-generator"
   }
 }

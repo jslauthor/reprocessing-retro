@@ -2,23 +2,13 @@
 # yarn lockfile v1
 
 
-FontGenerator@bsansouci/font-generator, font-generator@bsansouci/font-generator:
-  version "0.1.0"
-  resolved "https://codeload.github.com/bsansouci/font-generator/tar.gz/e6365aa8cdc87c1567c5fd85d6e2485cd40a6b1a"
-
 "Reasongl@github:bsansouci/reasongl":
   version "0.2.0"
-  resolved "https://codeload.github.com/bsansouci/reasongl/tar.gz/e664d18961a49960fbedb8fcaa941a7b45276fe3"
+  resolved "https://codeload.github.com/bsansouci/reasongl/tar.gz/78995f20193557814bbe5fbdefeec270fd4da2bc"
   dependencies:
     Tgls bsansouci/tgls
     Tsdl bsansouci/tsdl
     gl-matrix "*"
-
-Reprocessing@schmavery/reprocessing:
-  version "0.1.0"
-  resolved "https://codeload.github.com/schmavery/reprocessing/tar.gz/adf4abc8c75711567d5992caaaa44ea400324ec3"
-  dependencies:
-    Reasongl "github:bsansouci/reasongl"
 
 Tgls@bsansouci/tgls:
   version "0.8.4"
@@ -26,13 +16,13 @@ Tgls@bsansouci/tgls:
 
 Tsdl@bsansouci/tsdl:
   version "0.9.1"
-  resolved "https://codeload.github.com/bsansouci/tsdl/tar.gz/197cb1337397035d7a24190c52f3b4549a4a17da"
+  resolved "https://codeload.github.com/bsansouci/tsdl/tar.gz/276910e57c3c6bbe7fe804dcc54cb98a6f5fa90d"
   dependencies:
     sdl2 bsansouci/SDL-mirror#fast
 
-bs-platform@bsansouci/bsb-native#2.1.1:
-  version "2.1.1"
-  resolved "https://codeload.github.com/bsansouci/bsb-native/tar.gz/d76155b709dba032cdb11e99ebe0e2c37bcb2c85"
+bsb-native@4.0.6:
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/bsb-native/-/bsb-native-4.0.6.tgz#5c0289e24e0a3375ebf8f69a17510b884cace1ca"
   dependencies:
     yauzl "^2.9.1"
 
@@ -46,13 +36,23 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
+font-generator@bsansouci/font-generator:
+  version "0.1.0"
+  resolved "https://codeload.github.com/bsansouci/font-generator/tar.gz/58e3957305b397e24bd3f39c1505b7e9d4b2b39a"
+
 gl-matrix@*:
-  version "2.6.1"
-  resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-2.6.1.tgz#1bc7f7b396f4ae80abdb4db9a98cd07d170b9004"
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/gl-matrix/-/gl-matrix-2.8.1.tgz#1c7873448eac61d2cd25803a074e837bd42581a3"
 
 pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
+
+reprocessing@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/reprocessing/-/reprocessing-0.2.0.tgz#3a7533dc4cb5aedb5f54cefd78fa336f7e104729"
+  dependencies:
+    Reasongl "github:bsansouci/reasongl"
 
 sdl2@bsansouci/SDL-mirror#fast:
   version "2.0.5"
@@ -61,8 +61,8 @@ sdl2@bsansouci/SDL-mirror#fast:
     yauzl "^2.9.1"
 
 yauzl@^2.9.1:
-  version "2.9.2"
-  resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.9.2.tgz#4fb1bc7ae1fc2f57037b54af6acc8fe1031c5b77"
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/yauzl/-/yauzl-2.10.0.tgz#c7eb17c93e112cb1086fa6d8e51fb0667b79a5f9"
   dependencies:
     buffer-crc32 "~0.2.3"
     fd-slicer "~1.1.0"
